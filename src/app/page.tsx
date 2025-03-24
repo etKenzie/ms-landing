@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Hero from '@/components/sections/Hero'
 import Value from '@/components/sections/Value'
 import Solutions from '@/components/sections/Solutions'

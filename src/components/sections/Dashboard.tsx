@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
 import { BarChart, Brain, Bell } from "lucide-react"
+import Image from "next/image"
 
 export default function Dashboard() {
   const features = [
@@ -19,7 +19,7 @@ export default function Dashboard() {
   ]
 
   return (
-    <section className="py-20">
+    <section className="py-20 bg-slate-50">
       <div className="container mx-auto">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
@@ -33,13 +33,15 @@ export default function Dashboard() {
               ))}
             </div>
             <Button className="mt-8">
-              Explore Yourself
+              Explore Dashboard Features →
             </Button>
           </div>
           <div className="relative">
-            <img 
-              src="/dashboard.jpg" 
+            <Image 
+              src="/dashboard-preview.png" 
               alt="Dashboard Preview" 
+              width={600}
+              height={400}
               className="rounded-lg shadow-xl"
             />
           </div>

@@ -5,7 +5,7 @@ export default function FinalCTA() {
     <section className="py-20 bg-primary text-primary-foreground">
       <div className="container mx-auto text-center">
         <h2 className="text-3xl font-bold mb-4">
-          Don't Let Inconsistent Service Damage Your Brand!
+          Dont Let Inconsistent Service Damage Your Brand!
         </h2>
         <p className="text-xl mb-8">
           Schedule a free demo and receive a complimentary branch audit report.

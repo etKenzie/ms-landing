@@ -1,5 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card"
-import { Utensils, Store, Truck, Shirt } from "lucide-react"
+import { Utensils, Store, Truck } from "lucide-react"
 
 export default function Industries() {
   const industries = [
@@ -17,12 +17,7 @@ export default function Industries() {
       icon: Truck,
       title: "Food Trucks & Pop-Ups",
       description: "Maintain hygiene & efficiency."
-    },
-    // {
-    //   icon: Shirt,
-    //   title: "Laundries & Service Businesses",
-    //   description: "Track customer satisfaction."
-    // }
+    }
   ]
 
   return (
