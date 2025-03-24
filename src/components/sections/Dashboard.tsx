@@ -19,7 +19,7 @@ export default function Dashboard() {
   ]
 
   return (
-    <section className="py-20 bg-slate-50">
+    <section className="py-20">
       <div className="container mx-auto">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
@@ -38,7 +38,7 @@ export default function Dashboard() {
           </div>
           <div className="relative">
             <Image 
-              src="/dashboard-preview.png" 
+              src="/dashboard.jpg" 
               alt="Dashboard Preview" 
               width={600}
               height={400}
