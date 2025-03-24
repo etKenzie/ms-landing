@@ -1,14 +1,18 @@
 import { Button } from "@/components/ui/button"
+import Image from "next/image"
 
 export default function Hero() {
   return (
     <section className="relative min-h-[90vh] flex items-center">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
-        <img 
+        <Image 
+          fill
+          className="object-cover opacity-100"
+          priority
           src="/hero-bg.jpg" 
           alt="Background" 
-          className="w-full h-full object-cover opacity-100"
+  
         />
       </div>
       
@@ -18,7 +22,7 @@ export default function Hero() {
           Experience Audits Redefined
           </h1>
           <p className="text-xl text-foreground mb-8 text-white">
-          "See What Your Customers See. Feel What They Feel."
+          See What Your Customers See. Feel What They Feel.
           </p>
           <div className="flex gap-4">
             <Button size="lg" className="border border-white text-white">
