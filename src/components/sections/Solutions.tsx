@@ -33,9 +33,6 @@ export default function Solutions() {
       ],
       cta: "Monitor Your Storage →"
     },
-   
-    
-    
     
     {
       title: "Product Display & Planogram Compliance Audit",

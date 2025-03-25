@@ -9,11 +9,56 @@
   html {
     font-family: var(--font-lato);
   }
+
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
 }
+
 body {
   font-family: var(--font-lato);
 }
-
 
 @custom-variant dark (&:is(.dark *));
 
@@ -163,75 +208,6 @@ body {
   --font-playfair: var(--font-playfair), serif;
 }
 
-:root {
-  --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
-}
-
-.dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
-}
-
 @layer base {
   * {
     @apply border-border outline-ring/50;
@@ -240,7 +216,216 @@ body {
     @apply bg-background text-foreground;
   }
   
+  
+}
+
+@layer utilities {
+  .font-playfair {
+    font-family: 'Playfair Display', serif;
+  }
+
+  .font-lato {
+    font-family: 'Lato', sans-serif;
+  }
+
   .text-subtitle {
     @apply text-3xl font-bold text-center mb-12;
   }
+
+  .button-white {
+    @apply text-black hover:text-white bg-white hover:bg-black border border-black;
+  }
+
+  .button-black {
+    @apply text-white hover:text-black bg-black hover:bg-white border border-white;
+  }
+}
+
+@layer components {
+  .container {
+    @apply mx-auto px-8;
+    max-width: 100%;
+  }
+
+  @screen xs {
+    .container {
+      max-width: 400px;
+    }
+  }
+
+  @screen sm {
+    .container {
+      max-width: 640px;
+    }
+  }
+
+  @screen md {
+    .container {
+      max-width: 768px;
+    }
+  }
+
+  @screen lg {
+    .container {
+      max-width: 1024px;
+    }
+  }
+
+  @screen xl {
+    .container {
+      max-width: 1280px;
+    }
+  }
+
+  @screen 2xl {
+    .container {
+      max-width: 1536px;
+    }
+  }
+
+  @screen 3xl {
+    .container {
+      max-width: 1680px;
+    }
+  }
+
+  @screen 4xl {
+    .container {
+      max-width: 2200px;
+    }
+  }
+}
+
+/* Custom animations */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-50% - 1rem));
+  }
+}
+
+.animate-scroll {
+  animation: scroll 30s linear infinite;
+}
+
+/* Custom font sizes */
+.text-xs {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.text-sm {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.text-base {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.text-lg {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.text-xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.text-2xl {
+  font-size: 2rem;
+  line-height: 2.5rem;
+}
+
+.text-3xl {
+  font-size: 2.5rem;
+  line-height: 3rem;
+}
+
+.text-4xl {
+  font-size: 3rem;
+  line-height: 3.5rem;
+}
+
+.text-5xl {
+  font-size: 3.75rem;
+  line-height: 4rem;
+}
+
+.text-6xl {
+  font-size: 4.5rem;
+  line-height: 4.5rem;
+}
+
+/* Custom spacing */
+.space-y-4\.5 {
+  margin-top: 1.125rem;
+}
+
+.space-y-5\.5 {
+  margin-top: 1.375rem;
+}
+
+.space-y-6\.5 {
+  margin-top: 1.625rem;
+}
+
+.space-y-7\.5 {
+  margin-top: 1.875rem;
+}
+
+.space-y-8\.5 {
+  margin-top: 2.125rem;
+}
+
+.space-y-9\.5 {
+  margin-top: 2.375rem;
+}
+
+.space-y-10\.5 {
+  margin-top: 2.625rem;
+}
+
+.space-y-11\.5 {
+  margin-top: 2.875rem;
+}
+
+.space-y-12\.5 {
+  margin-top: 3.125rem;
+}
+
+.space-y-13\.5 {
+  margin-top: 3.375rem;
+}
+
+.space-y-14\.5 {
+  margin-top: 3.625rem;
+}
+
+.space-y-15\.5 {
+  margin-top: 3.875rem;
+}
+
+.space-y-16\.5 {
+  margin-top: 4.125rem;
+}
+
+.space-y-17\.5 {
+  margin-top: 4.375rem;
+}
+
+.space-y-18\.5 {
+  margin-top: 4.625rem;
+}
+
+.space-y-19\.5 {
+  margin-top: 4.875rem;
+}
+
+.space-y-20\.5 {
+  margin-top: 5.125rem;
 }

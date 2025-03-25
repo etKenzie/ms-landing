@@ -27,10 +27,10 @@ export default function Hero() {
             See What Your Customers See. Feel What They Feel.
           </p>
           <div className="flex gap-4">
-            <Button size="lg" className="border border-white hover:bg-white/90 hover:text-black">
+            <Button size="lg" className="button-white">
               Get a Free Demo →
             </Button>
-            <Button variant="outline" size="lg" className="hover:bg-black/90 hover:text-white">
+            <Button size="lg" className="button-black">
               Learn How It Works
             </Button>
           </div>

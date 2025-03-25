@@ -11,10 +11,10 @@ export default function FinalCTA() {
           Schedule a free demo and receive a complimentary branch audit report.
         </p>
         <div className="flex gap-4 justify-center">
-          <Button variant="secondary" size="lg">
+          <Button className="button-black" size="lg">
             Book a Free Consultation →
           </Button>
-          <Button size="lg" className="border border-white text-white">
+          <Button size="lg" className="button-white">
             Chat with Our Expert
           </Button>
         </div>
