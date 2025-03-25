@@ -4,10 +4,10 @@ export default function FinalCTA() {
   return (
     <section className="py-20 bg-primary text-primary-foreground">
       <div className="container mx-auto text-center">
-        <h2 className="text-3xl font-bold mb-4">
-          Dont Let Inconsistent Service Damage Your Brand!
+        <h2 className="text-subtitle font-playfair mb-4">
+          Do not Let Inconsistent Service Damage Your Brand!
         </h2>
-        <p className="text-xl mb-8">
+        <p className="text-xl mb-8 font-light">
           Schedule a free demo and receive a complimentary branch audit report.
         </p>
         <div className="flex gap-4 justify-center">

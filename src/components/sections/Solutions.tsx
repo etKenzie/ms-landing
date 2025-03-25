@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardFooter } from "@/components/ui/card"
-import { ShoppingBag, ClipboardCheck, Wrench } from "lucide-react"
+import { Card, CardContent, CardFooter, } from "@/components/ui/card"
+import { ShoppingBag, ClipboardCheck, Wrench, Truck, Thermometer, LayoutGrid } from "lucide-react"
 
 export default function Solutions() {
   const solutions = [
@@ -29,14 +29,45 @@ export default function Solutions() {
         "Routine monitoring: Lighting, AC, fixtures, and operational equipment.",
         "On-site minor repairs by certified technicians.", "Specialist escalation: Major issues handled within 24 hours with live tracking."
       ],
+      cta: "Improve Your Branch Maintenance →"
+    },
+    {
+      title: "Rider Check – Food Truck & Pop-Up Store Audit",
+      icon: Truck,
+      features: [
+        "Ensure cleanliness, safety, and compliance with operational standards.",
+        "Evaluate service speed and order accuracy.",
+        "Analyze strategic locations and sales performance based on data."
+      ],
       cta: "Audit Your Mobile Business →"
-    }
+    },
+    {
+      title: "Freezer & Product Storage Audit",
+      icon: Thermometer,
+      features: [
+        "Automated temperature monitoring with IoT sensors.",
+        "Receive alerts for products nearing expiration.",
+        "Ensure compliance with food safety standards (BPOM & HACCP)."
+      ],
+      cta: "Monitor Your Storage →"
+    },
+    {
+      title: "Product Display & Planogram Compliance Audit",
+      icon: LayoutGrid,
+      features: [
+        "AI-based image recognition to check product display and shelf organization.",
+        "Out-of-stock alerts and validation of pricing/promotions.",
+        "Optimize product placement to boost sales."
+      ],
+      cta: "Optimize Your Store Layout →"
+    },
+    
   ]
 
   return (
     <section className="py-20 bg-slate-50">
       <div className="container mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-12">Our Solutions</h2>
+        <h2 className="text-subtitle font-playfair">Our Solutions</h2>
         
         <div className="grid md:grid-cols-3 gap-8">
           {solutions.map((solution, index) => (
