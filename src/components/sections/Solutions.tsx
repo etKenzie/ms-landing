@@ -14,25 +14,7 @@ export default function Solutions() {
       cta: "See Sample Report →"
     },
     {
-      title: "Real-Time Customer Experience Surveys",
-      icon: ClipboardCheck,
-      features: [
-        "Instant feedback via digital surveys at your locations.",
-        "Track satisfaction trends and improve weak points."
-      ],
-      cta: "Try a Free Survey →"
-    },
-    {
-      title: "Proactive Branch Maintenance",
-      icon: Wrench,
-      features: [
-        "Routine monitoring: Lighting, AC, fixtures, and operational equipment.",
-        "On-site minor repairs by certified technicians.", "Specialist escalation: Major issues handled within 24 hours with live tracking."
-      ],
-      cta: "Improve Your Branch Maintenance →"
-    },
-    {
-      title: "Rider Check – Food Truck & Pop-Up Store Audit",
+      title: "Rider Check – Food Truck & Pop-Up Stores",
       icon: Truck,
       features: [
         "Ensure cleanliness, safety, and compliance with operational standards.",
@@ -51,6 +33,10 @@ export default function Solutions() {
       ],
       cta: "Monitor Your Storage →"
     },
+   
+    
+    
+    
     {
       title: "Product Display & Planogram Compliance Audit",
       icon: LayoutGrid,
@@ -60,6 +46,24 @@ export default function Solutions() {
         "Optimize product placement to boost sales."
       ],
       cta: "Optimize Your Store Layout →"
+    },
+    {
+      title: "Real-Time Customer Experience Surveys",
+      icon: ClipboardCheck,
+      features: [
+        "Instant feedback via digital surveys at your locations.",
+        "Track satisfaction trends and improve weak points."
+      ],
+      cta: "Try a Free Survey →"
+    },
+    {
+      title: "Proactive Branch Maintenance",
+      icon: Wrench,
+      features: [
+        "Routine monitoring: Lighting, AC, fixtures, and operational equipment.",
+        "On-site minor repairs by certified technicians.", "Specialist escalation: Major issues handled within 24 hours with live tracking."
+      ],
+      cta: "Improve Your Branch Maintenance →"
     },
     
   ]

@@ -1,13 +1,17 @@
+import Image from "next/image"
+
 export default function ValueProps() {
   return (
     <section className="py-20 bg-slate-50">
       <div className="container mx-auto flex flex-col md:flex-row items-center gap-10">
         {/* Left Side - Image */}
-        <div className="md:w-1/2">
-          <img 
+        <div className="md:w-1/2 relative h-[400px]">
+          <Image 
             src="/hero-bg2.jpg" 
             alt="Business Insights" 
-            className="w-full h-auto rounded-lg shadow-lg"
+            fill
+            className="object-cover rounded-lg shadow-lg"
+            priority
           />
         </div>
 
