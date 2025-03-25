@@ -4,14 +4,28 @@ import { Quote } from "lucide-react"
 export default function Testimonials() {
   const testimonials = [
     {
-      quote: "MisteriShopper.id helped us improve service speed by 30% and boost customer satisfaction!",
-      author: "[Brand Name], Restaurant Chain"
+      quote:
+        "Pengiriman barang dan stock selalu tersedia dan tepat waktu. Sangat membantu pasokan bahan makanan restoran kami. Sip sekali",
+      author: "Helmy Satriya Anugrah",
+      position: "Purchasing of LocaaHands Group",
+      image: "/testimonials/helmy.png",
     },
     {
-      quote: "Their mystery shoppers gave us insights we never knew we needed!",
-      author: "[Brand Name], Retail Store"
-    }
-  ]
+      quote:
+        "Pelayanan tim Tokopandai sangat fast respond. Kami dibantu untuk pemenuhan freezer dengan storage stock dari produk Juragan Beku. Dari segi harga juga lebih ok dibandingkan dengan supplier lainnya.",
+      author: "Ainur Rofiq",
+      position: "PT. Nawasaka Wisesa (The Southern Hotel)",
+      image: "/testimonials/ainur.png",
+    },
+    // {
+    //   quote:
+    //     "Dalam usaha peningkatan pelayanan terhadap konsumen Haus, kami berusaha mendapatkan gambaran terhadap kualitas pelayanan yang diberikan oleh crew Haus!. Untuk itu kami pilih program Mystery Shopper dari Toko Pandai. Kami puas dengan pelayanan yang diberikan, tidak hanya dalam pengumpulan data, namun juga dalam pelaporan yang kami terima. Tentunya menjadi insight penting secara objektif atas penilaian pelayanan oleh crew kami. Terima Kasih Toko Pandai.",
+    //   author: "Fauzan Bermana",
+    //   position: "HAUS!",
+    //   image: "/testimonials/fauzan.png",
+    // }
+  ];
+  
 
   return (
     <section className="py-20">

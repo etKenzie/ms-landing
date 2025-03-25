@@ -17,7 +17,7 @@ const lato = Lato({
 });
 
 export const metadata: Metadata = {
-  title: "MisteriShopper.id - Mystery Shopping & Customer Experience Audits",
+  title: "MisteriShopper.id",
   description: "Mystery shopping, real-time surveys, and mobile audits to ensure brand consistency, boost loyalty, and drive revenue.",
 };
 

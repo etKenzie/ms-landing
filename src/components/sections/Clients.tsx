@@ -8,7 +8,7 @@ const clients = [
   { name: "Darimi", logo: "/clients/darmi.png" },
   { name: "Roempi", logo: "/clients/roempi.png" },
   { name: "SKB", logo: "/clients/skb.png" },
-  { name: "Oppa", logo: "/clients/oppa.png" },
+  { name: "Unilever", logo: "/clients/unilever.png" },
 ]
 
 // Duplicate the list for seamless looping
