@@ -3,7 +3,7 @@ import Image from "next/image"
 
 const clients = [
   { name: "Jiwa", logo: "/clients/jiwa.png" },
-  { name: "Haus", logo: "/clients/haus.jpg" },
+  { name: "Haus", logo: "/clients/haus.png" },
   { name: "Hangry", logo: "/clients/hangry.png" },
   { name: "Darimi", logo: "/clients/darmi.png" },
   { name: "Roempi", logo: "/clients/roempi.png" },
