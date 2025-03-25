@@ -10,9 +10,10 @@ export default function Hero() {
           fill
           className="object-cover opacity-100"
           priority
-          src="/hero-bg.jpg" 
-          alt="Background" 
+          src="/test/7.jpg" 
+          alt="Background"
         />
+        <div className="absolute inset-0 bg-black/10"></div> 
       </div>
       
       <div className="container mx-auto relative z-10">

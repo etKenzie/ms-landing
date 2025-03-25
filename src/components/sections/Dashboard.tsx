@@ -38,7 +38,7 @@ export default function Dashboard() {
           </div>
           <div className="relative">
             <Image 
-              src="/dashboard.jpg" 
+              src="/db.jpg" 
               alt="Dashboard Preview" 
               width={600}
               height={400}

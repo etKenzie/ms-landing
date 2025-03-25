@@ -7,7 +7,7 @@ export default function ValueProps() {
         {/* Left Side - Image */}
         <div className="md:w-1/2 relative h-[400px]">
           <Image 
-            src="/hero-bg2.jpg" 
+            src="/test/12.jpg" 
             alt="Business Insights" 
             fill
             className="object-cover rounded-lg shadow-lg"
