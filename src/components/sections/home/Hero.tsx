@@ -1,0 +1,95 @@
+"use client";
+// import { Button } from "@/components/ui/button"
+import Image from "next/image"
+import { useState, useEffect } from "react"
+import { motion, useScroll, useTransform } from "framer-motion"
+import { useRef } from "react"
+
+const images = [
+  "/test/1.jpg",
+  "/test/2.jpg",
+  "/test/3.jpg",
+  "/test/4.jpg",
+  "/test/5.jpg",
+  "/test/6.jpg"
+]
+
+export default function Hero() {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0)
+  const containerRef = useRef(null)
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start 80%", "center center"]
+  })
+
+  // Transform scroll progress into scale and skew values
+  const scale = useTransform(scrollYProgress, [0, 1], [1.2, 1])
+  // const skewY = useTransform(scrollYProgress, [0, 1], [10, 0])
+  const borderRadius = useTransform(scrollYProgress, [0, 1], ["3rem", "3rem"])
+  // const rotate = useTransform(scrollYProgress, [0, 1], ["-10deg", "0deg"])
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length)
+    }, 2000) // Change image every second
+
+    return () => clearInterval(timer)
+  }, [])
+
+  return (
+    <section className="relative min-h-[100vh] flex flex-col bg-custom-light">
+ {/* Logo Text */}
+ <div className="relative z-20 py-6">
+        <div className="container mx-auto">
+          <div className="text-center">
+            <span className="text-2xl">
+              Mistery<span className="font-bold">Shopper</span>
+            </span>
+          </div>
+        </div>
+      </div>
+      
+      {/* Title Section */}
+      <div className="relative z-20 py-40 my-40">
+        <div className="container mx-auto">
+          <div className="max-w-3xl mx-auto text-center">
+            <h1 className="font-playfair text-6xl font-bold leading-tight mb-6 leading-none">
+              See What Your Customers See. <br />
+              <span className="font-playfair italic bg-gradient-to-r from-[#E32832] to-[#AE0C00] text-transparent bg-clip-text pb-1">
+                Feel What They Feel.
+              </span>
+            </h1>
+            {/* <p className="text-xl text-gray-600 mb-8 font-light">
+              
+            </p> */}
+            {/* <div className="flex gap-4">
+              <Button size="lg" className="button-white">
+                Get a Free Demo →
+              </Button>
+              <Button size="lg" className="button-black">
+                Learn How It Works
+              </Button>
+            </div> */}
+          </div>
+        </div>
+      </div>
+
+      {/* Image Carousel */}
+      <div ref={containerRef} className="container mx-auto px-4">
+        <motion.div 
+          style={{ scale, borderRadius }}
+          className="relative h-[80vh] overflow-hidden mx-20"
+        >
+          <Image 
+            fill
+            className="object-cover"
+            priority
+            src={images[currentImageIndex]}
+            alt={`Slide ${currentImageIndex + 1}`}
+          />
+          <div className="absolute inset-0 bg-black/20"></div>
+        </motion.div>
+      </div>
+    </section>
+  )
+} 

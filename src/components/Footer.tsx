@@ -1,15 +1,15 @@
-import { Facebook, Twitter, Instagram, Linkedin } from "lucide-react"
+import { Instagram, Linkedin } from "lucide-react"
 import { Button } from "./ui/button"
 
 export default function Footer() {
   return (
-    <footer className="bg-slate-900 text-slate-300 py-12">
-      <div className="container mx-auto">
+    <footer className="bg-slate-900 bg-custom-bg py-12">
+      <div className="container mx-auto text-white">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
             <h3 className="text-white font-semibold mb-4">Contact Us</h3>
-            <p>📞 +62 123 4567 8900</p>
-            <p>✉ hello@misterishopper.id</p>
+            <p>📞 +62 811 1931 5000</p>
+            <p>✉ info@tokopandai.id</p>
             <p>🌐 www.misterishopper.id</p>
           </div>
           
@@ -26,8 +26,8 @@ export default function Footer() {
           <div>
             <h3 className="text-white font-semibold mb-4">Follow Us</h3>
             <div className="flex gap-4">
-              <a href="#"><Facebook className="h-5 w-5" /></a>
-              <a href="#"><Twitter className="h-5 w-5" /></a>
+              {/* <a href="#"><Facebook className="h-5 w-5" /></a>
+              <a href="#"><Twitter className="h-5 w-5" /></a> */}
               <a href="#"><Instagram className="h-5 w-5" /></a>
               <a href="#"><Linkedin className="h-5 w-5" /></a>
             </div>
@@ -39,9 +39,9 @@ export default function Footer() {
               <input 
                 type="email" 
                 placeholder="Enter your email" 
-                className="w-full p-2 rounded bg-slate-800"
+                className="w-full p-2 rounded border border-white"
               />
-              <Button className="w-full">Subscribe</Button>
+              <Button className="w-full border border-white hover:bg-white hover:text-black">Subscribe</Button>
             </form>
           </div>
         </div>

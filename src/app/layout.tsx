@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Playfair_Display, Lato } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/Header";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -17,8 +18,8 @@ const lato = Lato({
 });
 
 export const metadata: Metadata = {
-  title: "MisteriShopper.id",
-  description: "Mystery shopping, real-time surveys, and mobile audits to ensure brand consistency, boost loyalty, and drive revenue.",
+  title: "MisteriShopper - Mystery Shopping Services",
+  description: "Professional mystery shopping services to improve your business",
 };
 
 export default function RootLayout({
@@ -28,7 +29,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${playfair.variable} ${lato.variable}`}>
-      <body className={lato.className}>{children}</body>
+      <>
+        <Header />
+        <body className={lato.className}>{children}</body>
+      </>
+      
     </html>
   );
 }

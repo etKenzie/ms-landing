@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button"
 
 export default function FinalCTA() {
   return (
-    <section className="py-20 bg-primary text-primary-foreground">
+    <section className="py-20 bg-custom-light text-primary-foreground">
       <div className="container mx-auto text-center">
         <h2 className="text-subtitle font-playfair mb-4">
           Do not Let Inconsistent Service Damage Your Brand!

@@ -16,9 +16,9 @@ const infiniteClients = [...clients, ...clients];
 
 export default function Clients() {
   return (
-    <section className="py-20 bg-slate-50 overflow-hidden">
+    <section className="pb-20 pt-10 bg-custom-light overflow-hidden">
       <div className="container mx-auto">
-        <h2 className="font-playfair text-3xl font-bold text-center mb-12">
+        <h2 className="font-playfair text-xl font-bold mb-12 text-center">
           Trusted by Industry Leaders
         </h2>
 

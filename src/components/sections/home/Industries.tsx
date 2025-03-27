@@ -21,7 +21,7 @@ export default function Industries() {
   ]
 
   return (
-    <section className="py-20 bg-slate-50">
+    <section className="py-20 bg-custom-light">
       <div className="container mx-auto">
         <h2 className="text-subtitle font-playfair">How we serve YOU</h2>
         

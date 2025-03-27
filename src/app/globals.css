@@ -31,6 +31,12 @@
     --input: 214.3 31.8% 91.4%;
     --ring: 222.2 84% 4.9%;
     --radius: 0.5rem;
+
+    /* colors */
+    --color-custom-100: 10 16% 90%;
+    --color-custom-200: 3 77% 32%;
+    --color-custom-300: 15 33% 9%;
+    --color-custom-400: 36 92% 53%;
   }
 
   .dark {
@@ -117,6 +123,14 @@ body {
 
   --color-card: hsl(var(--card));
   --color-card-foreground: hsl(var(--card-foreground));
+
+  /* custom colors */
+  --color-custom-light: hsl(var(--color-custom-100));
+  --color-custom-dark: hsl(var(--color-custom-200));
+  --color-custom-bg: hsl(var(--color-custom-300));
+  --color-custom-accent: hsl(var(--color-custom-400));
+
+  
 
   /* Avocado Colors */
   --color-avocado-100: oklch(0.99 0 0);
@@ -238,6 +252,35 @@ body {
 
   .button-black {
     @apply text-white hover:text-black bg-black hover:bg-white border border-white;
+  }
+
+  .button-standard {
+    @apply  hover:text-white hover:bg-white border border-white;
+  }
+
+  .bg-custom-light {
+    background-color: hsl(var(--color-custom-100));
+  }
+  .bg-custom-dark {
+    background-color: hsl(var(--color-custom-200));
+  }
+  .bg-custom-bg {
+    background-color: hsl(var(--color-custom-300));
+  }
+  .bg-custom-accent {
+    background-color: hsl(var(--color-custom-400));
+  }
+  .text-custom-light {
+    color: hsl(var(--color-custom-100));
+  }
+  .text-custom-dark {
+    color: hsl(var(--color-custom-200));
+  }
+  .text-custom-bg {
+    color: hsl(var(--color-custom-300));
+  }
+  .text-custom-accent {
+    color: hsl(var(--color-custom-400));
   }
 }
 

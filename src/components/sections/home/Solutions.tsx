@@ -66,7 +66,7 @@ export default function Solutions() {
   ]
 
   return (
-    <section className="py-20 bg-slate-50">
+    <section className="py-20 bg-custom-light">
       <div className="container mx-auto">
         <h2 className="text-subtitle font-playfair">Our Solutions</h2>
         
@@ -86,7 +86,7 @@ export default function Solutions() {
                 </ul>
               </CardContent>
               <CardFooter className="p-6 pt-0">
-                <Button variant="outline" className="w-full">
+                <Button variant="outline" className="w-full hover:bg-custom-bg hover:text-white">
                   {solution.cta}
                 </Button>
               </CardFooter>
