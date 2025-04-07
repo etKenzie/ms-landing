@@ -3,6 +3,7 @@ import Expertise from "@/components/sections/about/Expertise";
 import Impact from "@/components/sections/about/Impact";
 import WhyChooseUs from "@/components/sections/about/WhyChooseUs";
 import Mission from "@/components/sections/about/Mission";
+import Footer from "@/components/Footer";
 
 export default function About() {
   return (
@@ -12,7 +13,7 @@ export default function About() {
       <Impact />
       <Mission />
       <WhyChooseUs />
-      
+      <Footer />
     </main>
   );
 }
