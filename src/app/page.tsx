@@ -1,8 +1,8 @@
 import Hero from '@/components/sections/home/Hero'
 import Value from '@/components/sections/home/Value'
 import Solutions from '@/components/sections/home/Solutions'
-import Dashboard from "@/components/sections/home/Dashboard";
-// import Testimonials from '@/components/sections/home/Testimonials'
+// import Dashboard from "@/components/sections/home/Dashboard";
+import Testimonials from '@/components/sections/home/Testimonials'
 import Industries from '@/components/sections/home/Industries'
 // import Closing from '@/components/sections/home/Closing'
 import Footer from '@/components/Footer'
@@ -15,11 +15,12 @@ export default function Home() {
       <Hero />
       
       <Value />
-      <Solutions />
-      <Dashboard />
-      
-      {/* <Testimonials /> */}
       <Industries />
+      <Solutions />
+      {/* <Dashboard /> */}
+      
+      <Testimonials />
+      
       {/* <Closing /> */}
       <Clients />
       <FAQ />

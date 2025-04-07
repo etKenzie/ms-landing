@@ -6,12 +6,13 @@ import { motion, useScroll, useTransform } from "framer-motion"
 import { useRef } from "react"
 
 const images = [
-  "/test/1.jpg",
-  "/test/2.jpg",
-  "/test/3.jpg",
-  "/test/4.jpg",
-  "/test/5.jpg",
-  "/test/6.jpg"
+  "/carousel/1.jpg",
+  "/carousel/2.jpg",
+  "/carousel/3.jpg",
+  "/carousel/4.jpg",
+  "/carousel/5.jpg",
+  "/carousel/6.jpg",
+  "/carousel/7.jpg"
 ]
 
 export default function Hero() {
