@@ -53,8 +53,8 @@ export default function Hero() {
       {/* Title Section */}
       <div className="relative z-20 py-40 my-40">
         <div className="container mx-auto">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="font-playfair text-5xl md:text-6xl font-bold leading-tight mb-6">
+          <div className=" mx-auto text-center">
+            <h1 className="font-playfair text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6">
               See What Your Customers See. <br />
               <span className="font-playfair italic bg-gradient-to-r from-[#E32832] to-[#AE0C00] text-transparent bg-clip-text pb-1">
                 Feel What They Feel.
