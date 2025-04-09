@@ -31,7 +31,8 @@ export default function Contact() {
       setTimeout(() => {
         setStatus("idle");
       }, 3000);
-    } catch (error) {
+    } catch (_error) {
+      // Added underscore to indicate intentionally unused parameter
       setStatus("error");
       setTimeout(() => {
         setStatus("idle");
@@ -52,8 +53,8 @@ export default function Contact() {
             Get in Touch
           </h1>
           <p className="text-center text-gray-600 mb-8">
-            We'd love to hear from you. Send us a message and we'll respond as
-            soon as possible.
+            We&apos;d love to hear from you. Send us a message and we&apos;ll
+            respond as soon as possible.
           </p>
 
           <div className="bg-white/50 backdrop-blur-sm rounded-lg p-6 md:p-8 shadow-lg">
