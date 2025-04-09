@@ -1,9 +1,9 @@
 "use client";
 // import { Button } from "@/components/ui/button"
-import Image from "next/image"
-import { useState, useEffect } from "react"
-import { motion, useScroll, useTransform } from "framer-motion"
-import { useRef } from "react"
+import Image from "next/image";
+import { useState, useEffect } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 
 const images = [
   "/carousel/1.jpg",
@@ -12,35 +12,35 @@ const images = [
   "/carousel/4.jpg",
   "/carousel/5.jpg",
   "/carousel/6.jpg",
-  "/carousel/7.jpg"
-]
+  "/carousel/7.jpg",
+];
 
 export default function Hero() {
-  const [currentImageIndex, setCurrentImageIndex] = useState(0)
-  const containerRef = useRef(null)
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const containerRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ["start 80%", "center center"]
-  })
+    offset: ["start 80%", "center center"],
+  });
 
   // Transform scroll progress into scale and skew values
-  const scale = useTransform(scrollYProgress, [0, 1], [1.2, 1])
+  const scale = useTransform(scrollYProgress, [0, 1], [1.2, 1]);
   // const skewY = useTransform(scrollYProgress, [0, 1], [10, 0])
-  const borderRadius = useTransform(scrollYProgress, [0, 1], ["3rem", "3rem"])
+  const borderRadius = useTransform(scrollYProgress, [0, 1], ["3rem", "3rem"]);
   // const rotate = useTransform(scrollYProgress, [0, 1], ["-10deg", "0deg"])
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length)
-    }, 2000) // Change image every second
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 2000); // Change image every second
 
-    return () => clearInterval(timer)
-  }, [])
+    return () => clearInterval(timer);
+  }, []);
 
   return (
     <section className="relative min-h-[100vh] flex flex-col bg-custom-light">
- {/* Logo Text */}
- <div className="relative z-20 py-6">
+      {/* Logo Text */}
+      <div className="relative z-20 py-6">
         <div className="container mx-auto">
           <div className="text-center">
             <span className="text-2xl">
@@ -49,7 +49,7 @@ export default function Hero() {
           </div>
         </div>
       </div>
-      
+
       {/* Title Section */}
       <div className="relative z-20 py-40 my-40">
         <div className="container mx-auto">
@@ -76,12 +76,15 @@ export default function Hero() {
       </div>
 
       {/* Image Carousel */}
-      <div ref={containerRef} className="container mx-auto px-4">
-        <motion.div 
+      <div
+        ref={containerRef}
+        className="hidden md:block container mx-auto px-4"
+      >
+        <motion.div
           style={{ scale, borderRadius }}
           className="relative h-[80vh] overflow-hidden mx-20"
         >
-          <Image 
+          <Image
             fill
             className="object-cover"
             priority
@@ -92,5 +95,5 @@ export default function Hero() {
         </motion.div>
       </div>
     </section>
-  )
-} 
+  );
+}
