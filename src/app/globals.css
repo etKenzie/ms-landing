@@ -1,9 +1,7 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@layer theme, base, components, utilities;
 
 @layer base {
   html {
@@ -31,6 +29,16 @@
     --input: 214.3 31.8% 91.4%;
     --ring: 222.2 84% 4.9%;
     --radius: 0.5rem;
+
+    /* Define breakpoint values */
+    --screen-xs: 400px;
+    --screen-sm: 640px;
+    --screen-md: 768px;
+    --screen-lg: 1024px;
+    --screen-xl: 1280px;
+    --screen-2xl: 1536px;
+    --screen-3xl: 1680px;
+    --screen-4xl: 2200px;
 
     /* colors */
     --color-custom-100: 10 16% 90%;
@@ -61,6 +69,17 @@
     --ring: 212.7 26.8% 83.9%;
   }
 }
+@theme {
+  /* Optional: keep these if you want to use raw CSS media queries */
+  --screen-xs: 400px;
+  --screen-sm: 640px;
+  --screen-md: 768px;
+  --screen-lg: 1024px;
+  --screen-xl: 1280px;
+  --screen-2xl: 1536px;
+  --screen-3xl: 1680px;
+  --screen-4xl: 2200px;
+}
 
 body {
   font-family: var(--font-lato);
@@ -74,6 +93,7 @@ body {
 
   /* Breakpoints */
   --breakpoint-xs: 400px;
+  --breakpoint-md: 768px;
   --breakpoint-3xl: 1680px;
   --breakpoint-4xl: 2200px;
 
@@ -130,8 +150,6 @@ body {
   --color-custom-bg: hsl(var(--color-custom-300));
   --color-custom-accent: hsl(var(--color-custom-400));
 
-  
-
   /* Avocado Colors */
   --color-avocado-100: oklch(0.99 0 0);
   --color-avocado-200: oklch(0.98 0.04 113.22);
@@ -141,7 +159,7 @@ body {
   --color-avocado-600: oklch(0.53 0.12 118.34);
 
   /* Font Sizes */
-  --text-xs: 0.875rem;
+  /* --text-xs: 0.875rem;
   --text-xs-line: 1.25rem;
 
   --text-sm: 1rem;
@@ -169,7 +187,7 @@ body {
   --text-5xl-line: 4rem;
 
   --text-6xl: 4.5rem;
-  --text-6xl-line: 4.5rem;
+  --text-6xl-line: 4.5rem; */
 
   /* Border Radius */
   --radius-lg: var(--radius);
@@ -229,17 +247,15 @@ body {
   body {
     @apply bg-background text-foreground;
   }
-  
-  
 }
 
 @layer utilities {
   .font-playfair {
-    font-family: 'Playfair Display', serif;
+    font-family: "Playfair Display", serif;
   }
 
   .font-lato {
-    font-family: 'Lato', sans-serif;
+    font-family: "Lato", sans-serif;
   }
 
   .text-subtitle {
@@ -255,7 +271,7 @@ body {
   }
 
   .button-standard {
-    @apply  hover:text-white hover:bg-white border border-white;
+    @apply hover:text-white hover:bg-white border border-white;
   }
 
   .bg-custom-light {
@@ -290,49 +306,49 @@ body {
     max-width: 100%;
   }
 
-  @screen xs {
+  @media (min-width: 400px) {
     .container {
       max-width: 400px;
     }
   }
 
-  @screen sm {
+  @media (min-width: 640px) {
     .container {
       max-width: 640px;
     }
   }
 
-  @screen md {
+  @media (min-width: 768px) {
     .container {
       max-width: 768px;
     }
   }
 
-  @screen lg {
+  @media (min-width: 1024px) {
     .container {
       max-width: 1024px;
     }
   }
 
-  @screen xl {
+  @media (min-width: 1280px) {
     .container {
       max-width: 1280px;
     }
   }
 
-  @screen 2xl {
+  @media (min-width: 1536px) {
     .container {
       max-width: 1536px;
     }
   }
 
-  @screen 3xl {
+  @media (min-width: 1680px) {
     .container {
       max-width: 1680px;
     }
   }
 
-  @screen 4xl {
+  @media (min-width: 2200px) {
     .container {
       max-width: 2200px;
     }
@@ -354,7 +370,7 @@ body {
 }
 
 /* Custom font sizes */
-.text-xs {
+/* .text-xs {
   font-size: 0.875rem;
   line-height: 1.25rem;
 }
@@ -402,7 +418,7 @@ body {
 .text-6xl {
   font-size: 4.5rem;
   line-height: 4.5rem;
-}
+} */
 
 /* Custom spacing */
 .space-y-4\.5 {

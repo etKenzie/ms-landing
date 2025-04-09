@@ -11,14 +11,14 @@ export default function Header() {
       <div className="flex justify-between px-4 md:px-8">
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden bg-[#d3cccb] backdrop-blur-sm rounded-full p-2 shadow-lg"
+          className="md:hidden bg-[#d3cccb] backdrop-blur-sm rounded-full p-2 shadow-lg right-0"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
           {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
         </button>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:block bg-[#d3cccb] backdrop-blur-sm rounded-full px-6 py-2 shadow-lg">
+        <nav className="hidden md:block  bg-[#d3cccb] backdrop-blur-sm rounded-full px-6 py-2 shadow-lg">
           <div className="flex items-center gap-8">
             <Link href="/" className="transition-colors hover:font-bold">
               Home
