@@ -19,7 +19,8 @@ const lato = Lato({
 
 export const metadata: Metadata = {
   title: "MisteriShopper - Mystery Shopping Services",
-  description: "Professional mystery shopping services to improve your business",
+  description:
+    "Professional mystery shopping services to improve your business",
 };
 
 export default function RootLayout({
@@ -30,10 +31,11 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${playfair.variable} ${lato.variable}`}>
       <>
-        <Header />
-        <body className={lato.className}>{children}</body>
+        <body className={lato.className}>
+          <Header />
+          {children}
+        </body>
       </>
-      
     </html>
   );
 }

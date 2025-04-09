@@ -16,12 +16,12 @@ export default function Footer() {
           <div>
             <h3 className="text-white font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              <li>
+              {/* <li>
                 <a href="/blog">Blog</a>
               </li>
               <li>
                 <a href="/case-studies">Case Studies</a>
-              </li>
+              </li> */}
               <li>
                 <a href="/about">About Us</a>
               </li>
