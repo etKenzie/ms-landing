@@ -6,30 +6,32 @@ import { Quote } from "lucide-react";
 export default function Testimonials() {
   const testimonials = [
     {
-      quote: "MisteriShopper.id has transformed how we understand our customer experience. Their detailed reports and actionable insights have helped us improve our service quality significantly.",
-      author: "Sarah Johnson",
+      quote:
+        "Dalam usaha peningkatan pelayanan terhadap konsumen haus, kami berusaha mendapatkan gambaran terhadap kualitas pelayanan yang diberikan oleh crew haus!. untuk itu kami pilih program Mystery Shopper dari Toko Pandai.",
+      author: "Fauzan Bermana",
       position: "Customer Experience Manager",
-      company: "Retail Chain"
+      company: "Haus",
     },
     {
-      quote: "The level of detail in their mystery shopping reports is impressive. We've been able to identify and fix several operational issues that we weren't even aware of.",
+      quote:
+        "The level of detail in their mystery shopping reports is impressive. We've been able to identify and fix several operational issues that we weren't even aware of.",
       author: "Michael Chen",
       position: "Operations Director",
-      company: "Hospitality Group"
+      company: "Hospitality Group",
     },
     {
-      quote: "Working with MisteriShopper.id has been a game-changer for our business. Their insights have helped us improve our customer satisfaction scores by 30% in just six months.",
+      quote:
+        "Working with MisteriShopper.id has been a game-changer for our business. Their insights have helped us improve our customer satisfaction scores by 30% in just six months.",
       author: "Lisa Rodriguez",
       position: "Marketing Director",
-      company: "Fashion Retailer"
-    }
+      company: "Fashion Retailer",
+    },
   ];
-  
 
   return (
     <section className="py-20 bg-custom-dark">
       <div className="container mx-auto px-4">
-        <motion.h2 
+        <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
@@ -38,7 +40,7 @@ export default function Testimonials() {
         >
           What Our Clients Say
         </motion.h2>
-        
+
         <div className="grid md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
             <motion.div
@@ -64,8 +66,12 @@ export default function Testimonials() {
                   {testimonial.author.charAt(0)}
                 </div>
                 <div>
-                  <p className="font-semibold text-white">{testimonial.author}</p>
-                  <p className="text-sm text-gray-200">{testimonial.position}</p>
+                  <p className="font-semibold text-white">
+                    {testimonial.author}
+                  </p>
+                  <p className="text-sm text-gray-200">
+                    {testimonial.position}
+                  </p>
                   <p className="text-sm text-gray-200">{testimonial.company}</p>
                 </div>
               </div>
@@ -74,5 +80,5 @@ export default function Testimonials() {
         </div>
       </div>
     </section>
-  )
+  );
 }
