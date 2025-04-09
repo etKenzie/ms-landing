@@ -31,7 +31,7 @@ export default function Contact() {
       setTimeout(() => {
         setStatus("idle");
       }, 3000);
-    } catch (_error) {
+    } catch {
       // Added underscore to indicate intentionally unused parameter
       setStatus("error");
       setTimeout(() => {
