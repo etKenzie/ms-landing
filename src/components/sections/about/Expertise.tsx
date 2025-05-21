@@ -1,16 +1,13 @@
 "use client";
+import { useLanguage } from "@/lib/language-context";
+import { translations } from "@/lib/translations";
 import { motion } from "framer-motion";
 import { Check } from "lucide-react";
 
-const banks = [
-  "Citibank",
-  "HSBC",
-  "DBS",
-  "Standard Chartered Bank",
-  "BCA, BRI, and more"
-];
-
 export default function Expertise() {
+  const { language } = useLanguage();
+  const t = translations[language].about.expertise;
+
   return (
     <section className="py-20 bg-gray-400">
       <div className="container mx-auto px-4">
@@ -22,7 +19,7 @@ export default function Expertise() {
             viewport={{ once: true }}
             className="font-playfair text-4xl font-bold mb-12 text-center"
           >
-            Our Expertise
+            {t.title}
           </motion.h2>
           
           <motion.p 
@@ -32,7 +29,7 @@ export default function Expertise() {
             viewport={{ once: true }}
             className="text-xl text-gray-600 mb-12 leading-relaxed"
           >
-            Backed by Valdo Inc.&apos;s two decades of experience in customer experience research and service audits, we bring a proven track record of delivering high-quality, data-driven evaluations. Our expertise extends to working with leading financial institutions, including:
+            {t.description}
           </motion.p>
 
           <motion.div 
@@ -42,7 +39,7 @@ export default function Expertise() {
             viewport={{ once: true }}
             className="grid grid-cols-1 md:grid-cols-2 gap-6"
           >
-            {banks.map((bank, index) => (
+            {t.banks.map((bank, index) => (
               <div key={index} className="flex items-center gap-3">
                 <Check className="w-5 h-5 text-[#E32832]" />
                 <span className="text-lg text-gray-700">{bank}</span>

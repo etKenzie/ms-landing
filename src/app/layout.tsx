@@ -1,7 +1,8 @@
-import type { Metadata } from "next";
-import { Playfair_Display, Lato } from "next/font/google";
-import "./globals.css";
 import Header from "@/components/Header";
+import { LanguageProvider } from "@/lib/language-context";
+import type { Metadata } from "next";
+import { Lato, Playfair_Display } from "next/font/google";
+import "./globals.css";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -30,12 +31,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${playfair.variable} ${lato.variable}`}>
-      <>
-        <body className={lato.className} suppressHydrationWarning>
+      <body className={lato.className} suppressHydrationWarning>
+        <LanguageProvider>
           <Header />
           {children}
-        </body>
-      </>
+        </LanguageProvider>
+      </body>
     </html>
   );
 }

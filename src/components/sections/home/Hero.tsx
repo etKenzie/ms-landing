@@ -1,9 +1,10 @@
 "use client";
 // import { Button } from "@/components/ui/button"
-import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useLanguage } from "@/lib/language-context";
+import { translations } from "@/lib/translations";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import Image from "next/image";
+import { useEffect, useRef, useState } from "react";
 
 const images = [
   "/carousel/1.jpg",
@@ -18,6 +19,9 @@ const images = [
 export default function Hero() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const containerRef = useRef(null);
+  const { language } = useLanguage();
+  const t = translations[language].hero;
+
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start 80%", "center center"],
@@ -53,15 +57,15 @@ export default function Hero() {
       {/* Title Section */}
       <div className="relative z-20 py-40 my-40">
         <div className="container mx-auto">
-          <div className=" mx-auto text-center">
+          <div className="mx-auto text-center">
             <h1 className="font-playfair text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6">
-              See What Your Customers See. <br />
+              {t.title} <br />
               <span className="font-playfair italic bg-gradient-to-r from-[#E32832] to-[#AE0C00] text-transparent bg-clip-text pb-1">
-                Feel What They Feel.
+                {t.subtitle}
               </span>
             </h1>
             {/* <p className="text-xl text-gray-600 mb-8 font-light">
-              
+              {t.description}
             </p> */}
             {/* <div className="flex gap-4">
               <Button size="lg" className="button-white">

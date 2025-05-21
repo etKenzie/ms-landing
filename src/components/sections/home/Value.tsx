@@ -1,5 +1,7 @@
 "use client";
-import { motion, useScroll, useTransform, MotionValue } from "framer-motion";
+import { useLanguage } from "@/lib/language-context";
+import { translations } from "@/lib/translations";
+import { motion, MotionValue, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
 interface AnimatedWordProps {
@@ -39,11 +41,11 @@ function AnimatedWord({
 }
 
 export default function ValueProps() {
-  const text =
-    "Gain AI-powered, real-time insights to enhance service quality, optimize operations, and monitor multiple business channels effortlessly.";
+  const { language } = useLanguage();
+  const t = translations[language].value;
 
   // Group words in pairs
-  const words = text.split(" ");
+  const words = t.text.split(" ");
 
   const containerRef = useRef(null);
   const { scrollYProgress } = useScroll({

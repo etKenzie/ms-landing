@@ -1,7 +1,9 @@
 "use client";
-import { useState } from "react";
+import { useLanguage } from "@/lib/language-context";
+import { translations } from "@/lib/translations";
 import { motion } from "framer-motion";
 import { ChevronDown, ChevronUp } from "lucide-react";
+import { useState } from "react";
 
 const industries = [
   {
@@ -522,14 +524,15 @@ const industries = [
 
 export default function Industries() {
   const [activeIndustry, setActiveIndustry] = useState(industries[0].id);
-  const [expandedSections, setExpandedSections] = useState<
-    Record<string, boolean>
-  >(
+  const [expandedSections, setExpandedSections] = useState<Record<string, boolean>>(
     industries.reduce((acc, industry) => {
       acc[industry.id] = true;
       return acc;
     }, {} as Record<string, boolean>)
   );
+
+  const { language } = useLanguage();
+  const t = translations[language].industries;
 
   const toggleSection = (industryId: string, sectionIndex: number) => {
     setExpandedSections((prev) => ({
@@ -539,37 +542,41 @@ export default function Industries() {
   };
 
   const currentIndustry = industries.find((ind) => ind.id === activeIndustry);
+  const translatedIndustry = t.industries.find((ind) => ind.id === activeIndustry);
 
   return (
     <section className="py-20 bg-custom-light">
       <div className="container mx-auto px-4">
-        {/* <motion.h2 
+        <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
           className="text-3xl font-playfair text-center mb-12"
         >
-          How we serve YOU
-        </motion.h2> */}
+          {t.title}
+        </motion.h2>
 
         {/* Industry Selector */}
         <div className="flex justify-center mb-12">
           <nav className="bg-[#d3cccb] backdrop-blur-sm rounded-full px-6 py-2 shadow-lg">
             <div className="flex flex-wrap justify-center gap-4 md:gap-8">
-              {industries.map((industry) => (
-                <button
-                  key={industry.id}
-                  onClick={() => setActiveIndustry(industry.id)}
-                  className={`text-sm md:text-base transition-colors px-4 py-1 rounded-full ${
-                    activeIndustry === industry.id
-                      ? "bg-[#171716] text-white font-bold"
-                      : "text-gray-600 hover:text-black"
-                  }`}
-                >
-                  {industry.title}
-                </button>
-              ))}
+              {industries.map((industry) => {
+                const translatedTitle = t.industries.find(ti => ti.id === industry.id)?.title || industry.title;
+                return (
+                  <button
+                    key={industry.id}
+                    onClick={() => setActiveIndustry(industry.id)}
+                    className={`text-sm md:text-base transition-colors px-4 py-1 rounded-full ${
+                      activeIndustry === industry.id
+                        ? "bg-[#171716] text-white font-bold"
+                        : "text-gray-600 hover:text-black"
+                    }`}
+                  >
+                    {translatedTitle}
+                  </button>
+                );
+              })}
             </div>
           </nav>
         </div>
@@ -580,26 +587,26 @@ export default function Industries() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4 }}
-          className=" mx-auto"
+          className="mx-auto"
         >
-          {currentIndustry && (
+          {currentIndustry && translatedIndustry && (
             <div className="space-y-8">
               <div className="text-center mb-8">
                 <h3 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-2 md:mb-5 font-playfair">
-                  {currentIndustry.title} Solutions
+                  {translatedIndustry.title} {t.solutions}
                 </h3>
                 <p className="text-lg lg:text-xl text-gray-600 max-w-2xl mx-auto">
-                  {currentIndustry.summary}
+                  {translatedIndustry.summary}
                 </p>
               </div>
 
               {/* Benefits */}
-              <div className=" p-8 rounded-lg">
-                <h4 className="font-semibold text-lg lg:text-xl mb-6 lg:mb-8 text-center">
-                  How We Help {currentIndustry.title}
-                </h4>
+              <div className="p-8 rounded-lg">
+                <h2 className="text-lg lg:text-xl mb-6 lg:mb-8 text-center">
+                  {t.howWeHelp} {translatedIndustry.title}
+                </h2>
                 <div className="grid md:grid-cols-2 gap-6">
-                  {currentIndustry.benefits.map((benefit, i) => (
+                  {translatedIndustry.benefits.map((benefit, i) => (
                     <motion.div
                       key={i}
                       initial={{ opacity: 0, y: 20 }}
@@ -620,41 +627,44 @@ export default function Industries() {
               </div>
 
               <h1 className="font-bold text-2xl lg:text-3xl mt-12 mb-6">
-                Example Solutions
+                {t.exampleSolutions}
               </h1>
 
               {/* Sections */}
               <div className="space-y-6">
-                {currentIndustry.sections.map((section, index) => (
-                  <div
-                    key={index}
-                    className="border border-gray-200 rounded-lg overflow-hidden bg-[#d3cccb]"
-                  >
-                    <button
-                      onClick={() => toggleSection(currentIndustry.id, index)}
-                      className="w-full flex justify-between items-center p-4 hover:bg-[#c4bdbd] transition-colors"
+                {currentIndustry.sections.map((section, index) => {
+                  const translatedSection = translatedIndustry.sections[index];
+                  return (
+                    <div
+                      key={index}
+                      className="border border-gray-200 rounded-lg overflow-hidden bg-[#d3cccb]"
                     >
-                      <h4 className="font-semibold text-lg">{section.title}</h4>
-                      {expandedSections[`${currentIndustry.id}-${index}`] ? (
-                        <ChevronUp className="h-5 w-5" />
-                      ) : (
-                        <ChevronDown className="h-5 w-5" />
-                      )}
-                    </button>
-
-                    {expandedSections[`${currentIndustry.id}-${index}`] && (
-                      <motion.div
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: "auto" }}
-                        exit={{ opacity: 0, height: 0 }}
-                        transition={{ duration: 0.3 }}
-                        className="p-4 bg-[#d3cccb]"
+                      <button
+                        onClick={() => toggleSection(currentIndustry.id, index)}
+                        className="w-full flex justify-between items-center p-4 hover:bg-[#c4bdbd] transition-colors"
                       >
-                        {section.content}
-                      </motion.div>
-                    )}
-                  </div>
-                ))}
+                        <h4 className="font-semibold text-lg">{translatedSection.title}</h4>
+                        {expandedSections[`${currentIndustry.id}-${index}`] ? (
+                          <ChevronUp className="h-5 w-5" />
+                        ) : (
+                          <ChevronDown className="h-5 w-5" />
+                        )}
+                      </button>
+
+                      {expandedSections[`${currentIndustry.id}-${index}`] && (
+                        <motion.div
+                          initial={{ opacity: 0, height: 0 }}
+                          animate={{ opacity: 1, height: "auto" }}
+                          exit={{ opacity: 0, height: 0 }}
+                          transition={{ duration: 0.3 }}
+                          className="p-4 bg-[#d3cccb]"
+                        >
+                          {section.content}
+                        </motion.div>
+                      )}
+                    </div>
+                  );
+                })}
               </div>
             </div>
           )}

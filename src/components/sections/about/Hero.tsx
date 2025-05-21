@@ -1,7 +1,12 @@
 "use client";
+import { useLanguage } from "@/lib/language-context";
+import { translations } from "@/lib/translations";
 import { motion } from "framer-motion";
 
 export default function Hero() {
+  const { language } = useLanguage();
+  const t = translations[language].about.hero;
+
   return (
     <section className="relative py-32 bg-custom-light">
       <div className="container mx-auto px-4">
@@ -12,7 +17,7 @@ export default function Hero() {
             transition={{ duration: 0.6 }}
             className="font-playfair text-5xl font-bold mb-8"
           >
-            About Us
+            {t.title}
           </motion.h1>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
@@ -20,7 +25,7 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-xl text-gray-600 leading-relaxed"
           >
-            MisteriShopper.id is Indonesia premier Mystery Shopping & Experience Assurance service, dedicated to helping businesses elevate customer experience, ensure brand consistency, and enhance operational excellence.
+            {t.description}
           </motion.p>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}

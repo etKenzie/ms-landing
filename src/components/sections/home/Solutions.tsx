@@ -1,11 +1,22 @@
 "use client";
-import { useState } from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { useLanguage } from "@/lib/language-context";
+import { translations } from "@/lib/translations";
 import { motion } from "framer-motion";
-import { Card, CardContent } from "@/components/ui/card"
-import { ShoppingBag, ClipboardCheck, Wrench, Truck, Thermometer, LayoutGrid } from "lucide-react"
+import { ClipboardCheck, LayoutGrid, ShoppingBag, Thermometer, Truck, Wrench } from "lucide-react";
+import { useState } from "react";
 
 export default function Solutions() {
-  const [expandedCards, setExpandedCards] = useState<Record<number, boolean>>({});
+  const { language } = useLanguage();
+  const t = translations[language].solutions;
+
+  const [expandedCards, setExpandedCards] = useState<Record<number, boolean>>(
+    // Initialize all cards as expanded
+    Array.from({ length: 6 }, (_, i) => i).reduce((acc, index) => {
+      acc[index] = true;
+      return acc;
+    }, {} as Record<number, boolean>)
+  );
 
   const toggleCard = (index: number) => {
     setExpandedCards(prev => ({
@@ -16,71 +27,47 @@ export default function Solutions() {
 
   const solutions = [
     {
-      title: "Mystery Shopping & Retail Audits",
+      title: t.mysteryShopping.title,
       icon: ShoppingBag,
-      features: [
-        "Simulate real customer interactions to assess service speed and staff behavior.",
-        "Monitor SOP compliance, product presentation, and overall customer journey.",
-        "Identify operational gaps before they escalate into complaints or negative reviews."
-      ],
-      cta: "See Sample Report →"
+      features: t.mysteryShopping.features,
+      cta: t.mysteryShopping.cta
     },
     {
-      title: "Rider Check – Food Truck & Pop-Up Stores",
+      title: t.riderCheck.title,
       icon: Truck,
-      features: [
-        "Verify cleanliness, hygiene practices, and safety protocols across mobile units.",
-        "Assess order accuracy, service timing, and customer interaction quality.",
-        "Track high-performing locations and analyze real-time sales and foot traffic data."
-      ],
-      cta: "Audit Your Mobile Business →"
+      features: t.riderCheck.features,
+      cta: t.riderCheck.cta
     },
     {
-      title: "Freezer & Product Storage Audit",
+      title: t.freezer.title,
       icon: Thermometer,
-      features: [
-        "24/7 temperature monitoring with smart IoT sensors to prevent spoilage.",
-        "Receive instant alerts for temperature anomalies and product expiration risks.",
-        "Ensure regulatory compliance with BPOM, HACCP, and internal food safety protocols."
-      ],
-      cta: "Monitor Your Storage →"
+      features: t.freezer.features,
+      cta: t.freezer.cta
     },
     {
-      title: "Product Display & Planogram Compliance Audit",
+      title: t.planogram.title,
       icon: LayoutGrid,
-      features: [
-        "Leverage AI-driven image recognition to audit shelf layout and product visibility.",
-        "Detect stockouts, pricing errors, and promotional misplacements in real time.",
-        "Improve planogram compliance and optimize product placement to boost sales."
-      ],
-      cta: "Optimize Your Store Layout →"
+      features: t.planogram.features,
+      cta: t.planogram.cta
     },
     {
-      title: "Real-Time Customer Experience Surveys",
+      title: t.surveys.title,
       icon: ClipboardCheck,
-      features: [
-        "Collect immediate customer feedback via QR codes, tablets, or kiosks.",
-        "Analyze satisfaction trends by branch, time, and staff performance.",
-        "Take rapid action on negative experiences and identify recurring service issues."
-      ],
-      cta: "Try a Free Survey →"
+      features: t.surveys.features,
+      cta: t.surveys.cta
     },
     {
-      title: "Proactive Branch Maintenance",
+      title: t.maintenance.title,
       icon: Wrench,
-      features: [
-        "Regular inspections covering lighting, air conditioning, signage, and more.",
-        "On-site minor repairs performed promptly by certified technicians.",
-        "Escalate major issues to specialist teams with guaranteed 24-hour resolution and live tracking."
-      ],
-      cta: "Improve Your Branch Maintenance →"
+      features: t.maintenance.features,
+      cta: t.maintenance.cta
     },
   ]
 
   return (
     <section className="py-20 bg-custom-light">
       <div className="container mx-auto">
-        <h2 className="text-subtitle font-playfair">Our Solutions</h2>
+        <h2 className="text-subtitle font-playfair">{t.title}</h2>
         
         <div className="grid md:grid-cols-3 gap-8">
           {solutions.map((solution, index) => (
