@@ -9,9 +9,14 @@ export default function WhyChooseUs() {
   const t = translations[language].about.whyChooseUs;
 
   const icons = {
+    // English titles
     "Proven Track Record": Shield,
     "Comprehensive Solutions": Target,
-    "Fast Turnaround": Zap
+    "Fast Turnaround": Zap,
+    // Indonesian titles
+    "Rekam Jejak Terbukti": Shield,
+    "Solusi Komprehensif": Target,
+    "Waktu Penyelesaian Cepat": Zap
   };
 
   return (
@@ -24,7 +29,7 @@ export default function WhyChooseUs() {
           viewport={{ once: true }}
           className="font-playfair text-4xl font-bold mb-12 text-center"
         >
-          Why Choose MisteryShopper.id?
+          {t.title}
         </motion.h2>
 
         <div className="grid md:grid-cols-3 gap-8">
@@ -40,7 +45,7 @@ export default function WhyChooseUs() {
                 className="bg-neutral-300 p-8 rounded-none hover:bg-white transition-colors"
               >
                 <div className="flex flex-col items-center text-center">
-                  <Icon className="w-12 h-12 text-[#171716] mb-4" />
+                  {Icon && <Icon className="w-12 h-12 text-[#171716] mb-4" />}
                   <h3 className="text-xl font-bold text-[#171716] mb-2">{reason.title}</h3>
                   <p className="text-gray-800">{reason.description}</p>
                 </div>
