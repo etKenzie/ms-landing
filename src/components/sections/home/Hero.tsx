@@ -48,7 +48,7 @@ export default function Hero() {
         <div className="container mx-auto">
           <div className="text-center">
             <span className="text-2xl">
-              Mistery<span className="font-bold">Shopper</span>
+              Mistery<span className="font-bold">Audit</span>
             </span>
           </div>
         </div>

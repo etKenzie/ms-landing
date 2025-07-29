@@ -43,7 +43,7 @@ export default function Footer() {
             <div className="flex gap-4">
               {/* <a href="#"><Facebook className="h-5 w-5" /></a>
               <a href="#"><Twitter className="h-5 w-5" /></a> */}
-              <a href="https://www.instagram.com/misterishopper.id/">
+              <a href="https://www.instagram.com/misteriaudit.id/">
                 <Instagram className="h-5 w-5" />
               </a>
               <a href="#">

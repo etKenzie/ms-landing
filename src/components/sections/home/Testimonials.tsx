@@ -21,7 +21,7 @@ export default function Testimonials() {
     },
     {
       quote:
-        "Working with MisteriShopper.id has been a game-changer for our business. Their insights have helped us improve our customer satisfaction scores by 30% in just six months.",
+        "Working with MisteriAudit.id has been a game-changer for our business. Their insights have helped us improve our customer satisfaction scores by 30% in just six months.",
       author: "Lisa Rodriguez",
       position: "Marketing Director",
       company: "Fashion Retailer",

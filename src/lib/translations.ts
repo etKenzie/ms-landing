@@ -19,7 +19,7 @@ export const translations = {
         title: "Contact Us",
         phone: "+62 811 1931 5000",
         email: "info@tokopandai.id",
-        website: "www.misterishopper.id"
+        website: "www.misteriaudit.id"
       },
       quickLinks: {
         title: "Quick Links",
@@ -34,13 +34,13 @@ export const translations = {
         placeholder: "Enter your email",
         button: "Subscribe"
       },
-      copyright: `© ${new Date().getFullYear()} MisteriShopper.id. All rights reserved.`
+      copyright: `© ${new Date().getFullYear()} MisteriAudit.id. All rights reserved.`
     },
     faq: {
       title: "Frequently Asked Questions",
       items: [
         {
-          question: "What is MisteriShopper.id?",
+          question: "What is MisteriAudit.id?",
           answer: "An AI-powered evaluation service for retail and F&B businesses to ensure service quality and customer satisfaction."
         },
         {
@@ -48,7 +48,7 @@ export const translations = {
           answer: "Helps identify service issues, improve operational compliance, and enhance customer experience with AI-based data."
         },
         {
-          question: "How does Mystery Shopper work?",
+          question: "How does Mystery Audit work?",
           answer: "Evaluators act as customers and assess service, cleanliness, and operational compliance, generating AI-based reports."
         },
         {
@@ -62,7 +62,7 @@ export const translations = {
         {
           question: "What technology is used?",
           answer: [
-            "AI Mystery Shopper: Data-driven analysis",
+            "AI Mystery Audit: Data-driven analysis",
             "IoT Monitoring: Equipment temperature tracking",
             "Geo-Tracking: Performance evaluation for mobile businesses",
             "Analytics Dashboard: Real-time reports"
@@ -221,8 +221,8 @@ export const translations = {
     },
     about: {
       hero: {
-        title: "About MisteryShopper.id",
-        description: "MisteriShopper.id is Indonesia premier Mystery Shopping & Experience Assurance service, dedicated to helping businesses elevate customer experience, ensure brand consistency, and enhance operational excellence."
+        title: "About MisteryAudit.id",
+        description: "MisteriAudit.id is Indonesia premier Mystery Shopping & Experience Assurance service, dedicated to helping businesses elevate customer experience, ensure brand consistency, and enhance operational excellence."
       },
       expertise: {
         title: "Our Expertise",
@@ -254,7 +254,7 @@ export const translations = {
         ]
       },
       whyChooseUs: {
-        title: "Why Choose MisteryShopper.id?",
+        title: "Why Choose MisteryAudit.id?",
         reasons: [
           {
             title: "Proven Track Record",
@@ -297,7 +297,7 @@ export const translations = {
         title: "Hubungi Kami",
         phone: "+62 811 1931 5000",
         email: "info@tokopandai.id",
-        website: "www.misterishopper.id"
+        website: "www.misteriaudit.id"
       },
       quickLinks: {
         title: "Tautan Cepat",
@@ -312,13 +312,13 @@ export const translations = {
         placeholder: "Masukkan email Anda",
         button: "Berlangganan"
       },
-      copyright: `© ${new Date().getFullYear()} MisteriShopper.id. Hak Cipta Dilindungi.`
+      copyright: `© ${new Date().getFullYear()} MisteriAudit.id. Hak Cipta Dilindungi.`
     },
     faq: {
       title: "Pertanyaan yang Sering Diajukan",
       items: [
         {
-          question: "Apa itu MisteriShopper.id?",
+          question: "Apa itu MisteriAudit.id?",
           answer: "Layanan evaluasi berbasis AI untuk bisnis ritel dan F&B untuk memastikan kualitas layanan dan kepuasan pelanggan."
         },
         {
@@ -326,7 +326,7 @@ export const translations = {
           answer: "Membantu mengidentifikasi masalah layanan, meningkatkan kepatuhan operasional, dan meningkatkan pengalaman pelanggan dengan data berbasis AI."
         },
         {
-          question: "Bagaimana cara kerja Mystery Shopper?",
+          question: "Bagaimana cara kerja Mystery Audit?",
           answer: "Evaluator bertindak sebagai pelanggan dan menilai layanan, kebersihan, dan kepatuhan operasional, menghasilkan laporan berbasis AI."
         },
         {
@@ -340,7 +340,7 @@ export const translations = {
         {
           question: "Teknologi apa yang digunakan?",
           answer: [
-            "AI Mystery Shopper: Analisis berbasis data",
+            "AI Mystery Audit: Analisis berbasis data",
             "Pemantauan IoT: Pelacakan suhu peralatan",
             "Geo-Tracking: Evaluasi kinerja untuk bisnis mobile",
             "Dasbor Analitik: Laporan real-time"
@@ -429,7 +429,7 @@ export const translations = {
           sections: [
             {
               title: "Pengalaman Ritel Pelanggan: Mystery Shopping & Umpan Balik",
-              content: "Kami mengirimkan mystery shopper untuk mengevaluasi toko sebagai pelanggan nyata, menilai kualitas layanan, efisiensi checkout, dan profesionalisme staf."
+              content: "Kami mengirimkan mystery audit untuk mengevaluasi toko sebagai pelanggan nyata, menilai kualitas layanan, efisiensi checkout, dan profesionalisme staf."
             },
             {
               title: "Kepatuhan Freezer & Penyimpanan Dingin",
@@ -471,7 +471,7 @@ export const translations = {
           sections: [
             {
               title: "Audit Mystery Shopping",
-              content: "Mystery shopper mengevaluasi setiap tahap perjalanan pelanggan untuk bisnis makanan mobile."
+              content: "Mystery Audit mengevaluasi setiap tahap perjalanan pelanggan untuk bisnis makanan mobile."
             },
             {
               title: "Survei Pelanggan",
@@ -487,8 +487,8 @@ export const translations = {
     },
     about: {
       hero: {
-        title: "Tentang MisteryShopper.id",
-        description: "MisteriShopper.id adalah layanan Mystery Shopping & Experience Assurance terkemuka di Indonesia, yang berdedikasi untuk membantu bisnis meningkatkan pengalaman pelanggan, memastikan konsistensi merek, dan meningkatkan keunggulan operasional."
+        title: "Tentang MisteryAudit.id",
+        description: "MisteriAudit.id adalah layanan Mystery Shopping & Experience Assurance terkemuka di Indonesia, yang berdedikasi untuk membantu bisnis meningkatkan pengalaman pelanggan, memastikan konsistensi merek, dan meningkatkan keunggulan operasional."
       },
       expertise: {
         title: "Keahlian Kami",
@@ -520,7 +520,7 @@ export const translations = {
         ]
       },
       whyChooseUs: {
-        title: "Mengapa Memilih MisteryShopper.id?",
+        title: "Mengapa Memilih MisteryAudit.id?",
         reasons: [
           {
             title: "Rekam Jejak Terbukti",
