@@ -19,9 +19,9 @@ const lato = Lato({
 });
 
 export const metadata: Metadata = {
-  title: "MisteriShopper - Mystery Shopping Services",
+  title: "MisteriAudit",
   description:
-    "Professional mystery shopping services to improve your business",
+    "Professional audit services to improve your business",
 };
 
 export default function RootLayout({
