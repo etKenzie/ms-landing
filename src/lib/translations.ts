@@ -17,7 +17,7 @@ export const translations = {
     footer: {
       contact: {
         title: "Contact Us",
-        phone: "+62 811 1931 5000",
+        phone: "+62 811 1201 5228",
         email: "info@tokopandai.id",
         website: "www.misteriaudit.id"
       },
@@ -295,7 +295,7 @@ export const translations = {
     footer: {
       contact: {
         title: "Hubungi Kami",
-        phone: "+62 811 1931 5000",
+        phone: "+62 811 1201 5228",
         email: "info@tokopandai.id",
         website: "www.misteriaudit.id"
       },
