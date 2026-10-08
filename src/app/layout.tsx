@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import ChatbotWidget from "@/components/ChatbotWidget";
 import { LanguageProvider } from "@/lib/language-context";
 import type { Metadata } from "next";
 import { Lato, Playfair_Display } from "next/font/google";
@@ -35,6 +36,7 @@ export default function RootLayout({
         <LanguageProvider>
           <Header />
           {children}
+          <ChatbotWidget />
         </LanguageProvider>
       </body>
     </html>
