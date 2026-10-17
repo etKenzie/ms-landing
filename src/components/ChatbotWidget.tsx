@@ -11,7 +11,7 @@ export default function ChatbotWidget() {
       {isOpen && (
         <div className="mb-3 w-[400px] max-w-[calc(100vw-2rem)] h-[600px] max-h-[calc(100vh-6rem)] overflow-hidden rounded-xl shadow-2xl bg-white border border-gray-200">
           <iframe
-            src="http://192.168.12.11/widget/c218be8d886a"
+            src="https://ai.tokopandai.id/widget/c218be8d886a"
             width="100%"
             height="100%"
             className="w-full h-full border-0"
